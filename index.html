@@ -1,13 +1,105 @@
 <!doctype html>
-<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>QuickCare Delivery</title><link rel="stylesheet" href="style.css"></head>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QuickCare Delivery | Food & Medicine Delivered Fast</title>
+<meta name="description" content="QuickCare Delivery — খাবার ও প্রয়োজনীয় স্বাস্থ্যসামগ্রী সহজে অর্ডার করুন।">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://subhodipbose70-pixel.github.io/Quickcare/">
+<meta property="og:title" content="QuickCare Delivery">
+<meta property="og:description" content="Food & Medicine Delivered Fast">
+<meta property="og:url" content="https://subhodipbose70-pixel.github.io/Quickcare/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header><div class="logo">QuickCare <span>Delivery</span></div><nav><a href="#home">Home</a><a href="#food">Food</a><a href="#medicine">Medicine</a><a href="#contact">Contact</a></nav><button onclick="toggleCart()">🛒 Cart <b id="count">0</b></button></header>
+<div class="topbar">🚚 Fast Delivery <span>•</span> 🛡️ Trusted Service <span>•</span> ⭐ Best Quality <span class="top-right">📞 +91 XXXXX XXXXX</span></div>
+
+<header class="header">
+  <a class="brand" href="#home"><span class="brand-icon">✚</span><span><b>Quick<span>Care</span></b><small>Delivery</small></span></a>
+  <nav>
+    <a class="active" href="#home">🏠 Home</a>
+    <a href="#food">🍔 Food</a>
+    <a href="#medicine">💊 Medicine</a>
+    <a href="#offers">🎁 Offers</a>
+    <a href="#contact">📞 Contact</a>
+  </nav>
+  <div class="actions">
+    <div class="search"><span>⌕</span><input id="searchInput" placeholder="Search food, medicine..."></div>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Cart <b id="count">0</b></button>
+  </div>
+</header>
+
 <main id="home">
-<section class="hero"><div><h1>Food & Medicine<br><span>Delivered Fast</span></h1><p>আপনার প্রয়োজনীয় খাবার ও ওষুধ সহজে অর্ডার করুন।</p><button onclick="document.querySelector('#food').scrollIntoView({behavior:'smooth'})">Order Now</button></div><div class="heroicon">🛵</div></section>
-<section id="food"><h2>🍔 Popular Food</h2><div class="grid" id="foodGrid"></div></section>
-<section id="medicine"><h2>💊 Essential Medicine</h2><p class="note">ওষুধ অর্ডারের ক্ষেত্রে স্থানীয় আইন ও প্রয়োজনীয় প্রেসক্রিপশন প্রযোজ্য হতে পারে।</p><div class="grid" id="medicineGrid"></div></section>
-<section id="contact" class="contact"><h2>Contact</h2><p>Phone: +91 XXXXX XXXXX</p><p>Email: your@email.com</p></section>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="pill">⚡ Quick & Easy Delivery</div>
+    <h1>Food & Medicine<br><strong>Delivered Fast</strong></h1>
+    <p>আপনার প্রয়োজনীয় খাবার ও স্বাস্থ্যসামগ্রী সহজে অর্ডার করুন, আমরা পৌঁছে দেব আপনার কাছে।</p>
+    <div class="trust-row">
+      <span>🛵 <b>Fast Delivery</b><small>30–45 min</small></span>
+      <span>🛡️ <b>Secure Order</b><small>Safe & Simple</small></span>
+      <span>🏆 <b>Best Quality</b><small>Trusted Products</small></span>
+    </div>
+    <div class="hero-buttons">
+      <a class="primary" href="#food">Order Now →</a>
+      <a class="secondary" href="#how">▶ How It Works</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="delivery-badge">FREE<br><small>Delivery</small></div>
+    <div class="food-visual">🍔</div><div class="pizza-visual">🍕</div>
+    <div class="medicine-visual">💊</div><div class="bag">🛍️<b>QuickCare</b></div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="section-head"><h2>🎁 Shop By Category</h2><a href="#food">View All →</a></div>
+  <div class="categories">
+    <a href="#food" class="category cat1"><span>🍔</span><b>Meals & Combos</b><small>20+ Items</small></a>
+    <a href="#food" class="category cat2"><span>🍕</span><b>Pizza</b><small>15+ Items</small></a>
+    <a href="#food" class="category cat3"><span>🍜</span><b>Chinese</b><small>18+ Items</small></a>
+    <a href="#food" class="category cat4"><span>🍰</span><b>Desserts</b><small>10+ Items</small></a>
+    <a href="#medicine" class="category cat5"><span>💊</span><b>Medicines</b><small>Prescription may apply</small></a>
+    <a href="#medicine" class="category cat6"><span>🧴</span><b>Health & Wellness</b><small>Popular items</small></a>
+    <a href="#medicine" class="category cat7"><span>🩹</span><b>Health Essentials</b><small>Everyday care</small></a>
+  </div>
+</section>
+
+<section class="section products-section" id="food">
+  <div class="section-head"><h2>🔥 Popular Food</h2><a href="#food">View All →</a></div>
+  <div class="products" id="foodGrid"></div>
+</section>
+
+<section class="section products-section medicine-section" id="medicine">
+  <div class="section-head"><h2>💊 Essential Health Products</h2><a href="#medicine">View All →</a></div>
+  <p class="note">ওষুধ অর্ডারের ক্ষেত্রে স্থানীয় আইন, বয়স/যোগ্যতা ও প্রয়োজনীয় প্রেসক্রিপশন প্রযোজ্য হতে পারে।</p>
+  <div class="products" id="medicineGrid"></div>
+</section>
+
+<section class="how" id="how">
+  <div><span>1</span><b>Choose</b><small>Food or health products বেছে নিন</small></div>
+  <div><span>2</span><b>Add to Cart</b><small>পছন্দের item cart-এ যোগ করুন</small></div>
+  <div><span>3</span><b>Place Order</b><small>আপনার তথ্য দিয়ে order দিন</small></div>
+  <div><span>4</span><b>Get Delivery</b><small>আমরা আপনার কাছে পৌঁছে দেব</small></div>
+</section>
+
+<section class="contact" id="contact">
+  <div><h2>Need Help?</h2><p>অর্ডার বা delivery সম্পর্কে জানতে আমাদের সঙ্গে যোগাযোগ করুন।</p></div>
+  <div class="contact-buttons"><a href="tel:+91XXXXXXXXXX">📞 Call Us</a><a href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 WhatsApp</a></div>
+</section>
 </main>
-<aside id="cart" class="cart"><button class="close" onclick="toggleCart()">×</button><h2>Your Cart</h2><div id="cartItems"></div><h3>Total: ₹<span id="total">0</span></h3><button onclick="checkout()">Place Order</button></aside>
-<footer>© 2026 QuickCare Delivery</footer><script src="app.js"></script></body></html>
+
+<aside class="cart-panel" id="cart">
+  <div class="cart-head"><h2>🛒 Your Cart</h2><button onclick="toggleCart()">×</button></div>
+  <div id="cartItems" class="cart-items"><p class="empty">Your cart is empty.</p></div>
+  <div class="cart-total"><span>Total</span><b>₹<span id="total">0</span></b></div>
+  <button class="checkout" onclick="checkout()">Place Order</button>
+</aside>
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+<footer>© 2026 QuickCare Delivery · Food & Medicine Delivered Fast</footer>
+<script src="app.js"></script>
+</body>
+</html>
