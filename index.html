@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QuickCare Delivery</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="logo">QuickCare <span>Delivery</span></div><nav><a href="#home">Home</a><a href="#food">Food</a><a href="#medicine">Medicine</a><a href="#contact">Contact</a></nav><button onclick="toggleCart()">🛒 Cart <b id="count">0</b></button></header>
+<main id="home">
+<section class="hero"><div><h1>Food & Medicine<br><span>Delivered Fast</span></h1><p>আপনার প্রয়োজনীয় খাবার ও ওষুধ সহজে অর্ডার করুন।</p><button onclick="document.querySelector('#food').scrollIntoView({behavior:'smooth'})">Order Now</button></div><div class="heroicon">🛵</div></section>
+<section id="food"><h2>🍔 Popular Food</h2><div class="grid" id="foodGrid"></div></section>
+<section id="medicine"><h2>💊 Essential Medicine</h2><p class="note">ওষুধ অর্ডারের ক্ষেত্রে স্থানীয় আইন ও প্রয়োজনীয় প্রেসক্রিপশন প্রযোজ্য হতে পারে।</p><div class="grid" id="medicineGrid"></div></section>
+<section id="contact" class="contact"><h2>Contact</h2><p>Phone: +91 XXXXX XXXXX</p><p>Email: your@email.com</p></section>
+</main>
+<aside id="cart" class="cart"><button class="close" onclick="toggleCart()">×</button><h2>Your Cart</h2><div id="cartItems"></div><h3>Total: ₹<span id="total">0</span></h3><button onclick="checkout()">Place Order</button></aside>
+<footer>© 2026 QuickCare Delivery</footer><script src="app.js"></script></body></html>
